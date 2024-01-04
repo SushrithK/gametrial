@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLendr</title>
+    <link rel="icon" type="image/x-icon" href="C:\sushrith\iwd material\controller.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("gameback.jpg");
+           background-size:100vw;
+        }
+
+        header {
+            padding: 5px;
+            text-align: left;
+            background-image: url("gaming.jpeg");
+            overflow: hidden; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: larger;
+            margin: 0;
+        }
+
+        .navbar-brand span {
+            color: #ffc107 !important;
+        }
+
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            display: inline-block;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 40px;
+            margin-top:80px;
+            background-color: whitesmoke;
+            opacity:unset;
+            width:max-content;
+            align-content: center;
+
+        }
+
+        label {
+            width:fit-content;
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        center {
+            font-size: 20px;
+        }
+
+        input {
+            border-radius: 10px;
+            height:30px;
+        }
+
+        img {
+            width:40px;
+            height:40px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        a {
+            font-size: 15px;
+        }
+
+        button {
+            border-radius: 10px;
+            height:30px;
+            width:280px;
+        }
+
+
+    </style>
+</head>
+<body>
+        <header>
+            <div class="navbar-brand">
+                <h1>Game<span>Lendr</span></h1>
+            </div>
+            <nav>
+                <li style="list-style-type: none; display: inline-block; padding: 20px; text-decoration: none;"><a href="Home1.html">Home</a></li>
+                <li style="list-style-type: none; display: inline-block; padding: 20px;"><a href="About.html" target="_blank">About Us</a></li>
+            </nav>
+        </header>
+    <fieldset>
+    <center>Secure Checkout</center>
+    <br>
+    <br>
+    <form action="Thankyou.html" method="get">
+    <form>
+        <label for="femail">Email:</label>
+        <input type="email" id="femail" name="email" required placeholder="Email">
+        <br>
+        <br>
+        <label for="ftype">Payment Type:</label>
+        <br>
+        <br>
+        <input type="radio" id ="ftype" name="type" value="VISA">
+        <label for="VISA">VISA</label>
+        <br>
+        <input type="radio" id ="ftype" name="type" value="Mastercard">
+        <label for="Mastercard">Mastercard</label>
+        <br>
+        <input type="radio" id ="ftype" name="type" value="UPI">
+        <label for="UPI">UPI</label>
+        <br>
+        <input type="radio" id ="ftype" name="type" value="Cash on Delivery">
+        <label for="Cash on Delivery">Cash on Delivery</label>
+        <br>
+        <br>
+        <label for="fcardno">Card No:</label>
+        <input type="text" id="fcardno" name="cardno" required placeholder="Card Number" pattern="[0-9]{16}" title="Please enter a 16-digit card number">
+        <br>
+        <br>
+        <label for="exp">Expiry Date:</label>
+        <input type ="date" id="exp" name="exp" required>
+        <br>
+        <br>
+        <label for="fnameoncard">Name On The Card:</label>
+        <input type="text" id="fnameoncard" name="nameoncard" required placeholder="Name on the Card">
+        <br>
+        <br>
+        <label for="cvv">Cvv/Cvc:</label>
+        <input type="text" id="fsec" name="sec" required placeholder="Security Code" pattern="[0-9]{3}" title="Please enter a 3 digit cvc">
+        <p>For upi scan this qr code</p>
+        <img src="qrcode.png" width="300px" height="300px">
+        
+
+        <p>By placing this order you are agreeing to our terms and conditions</p>
+        
+        <br>
+        
+        
+        <button style="background-color: violet; color:white" type="submit">Place Order</button>
+        </a>
+        
+        </form>
+    </form>
+
+
+    </fieldset> 
+</body>
+</html>

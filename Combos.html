@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>GameLendr</title>
+    <link rel="icon" type="image/x-icon" href="C:\sushrith\iwd material\controller.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('backgrounddev.png');
+        }
+
+        header {
+            padding: 5px;
+            text-align: left;
+            background-image: url("gaming.jpeg");
+            overflow: hidden; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: larger;
+            margin: 0;
+        }
+
+        .navbar-brand span {
+            color: #ffc107 !important;
+        }
+
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .device-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .device-card:hover {
+            transform: scale(1.05);
+        }
+        .device-image {
+    flex: 0 0 100%; 
+    text-align: center;
+        }
+        .device-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    
+    .device-card {
+        flex: 0 0 calc(30% - 20px); 
+        margin-top: 40px;
+        box-sizing: border-box;
+        
+    }
+
+   
+    .device-image {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .device-details,#sort{
+    flex: 0 0 100%;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 15px; 
+    color: black; 
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .goback-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        text-decoration:none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .goback-button:hover {
+        background-color: red;
+    }
+    h2{
+        text-align: center;
+    }
+    label[for="sort"], #sort {
+    margin-top: 20px;
+    margin-left: 20px;
+    }
+    .rentbutton{
+        font-weight: bolder;
+    }
+    </style>
+</head>
+<body>
+        <header>
+            <div class="navbar-brand">
+                <h1>Game<span>Lendr</span></h1>
+            </div>
+            <nav>
+                <ul style="list-style-type: none; display: flex;">
+                    <li style="padding: 20px; text-decoration: none;"><a href="Home1.html">Home</a></li>
+                    <li style="padding: 20px;"><a href="About.html" target="_blank">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <a href="rent1.html" class="goback-button">Back to Rent</a>
+        <label for="sort" style="font-weight: bolder;color: yellow;">Sort by:</label>
+        <select id="sort" onchange="sortDevices()">
+            <option value="lowToHigh">Price: Low to High</option>
+            <option value="highToLow">Price: High to Low</option>
+        </select>
+<div class="device-container">
+<div class="device-card" data-price="500">
+    <div class="device-image">
+        <img src="keyboardmouse.png" alt="LogitechGProCorsairK95Combo">
+    </div>
+    <h2>Logitech G Pro Gaming Mouse + Corsair K95 RGB Platinum XT Mechanical Keyboard Combo</h2>
+    <div class="device-details">
+        <p>Combo featuring a high-performance gaming mouse and a premium mechanical keyboard.</p>
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:500INR/DAY</button></a>
+    </div>
+</div>
+
+
+
+<div class="device-card" data-price="2000">
+    <div class="device-image">
+        <img src="console.jpg" alt="XboxSeriesXPS5Combo">
+    </div>
+    <h2>Xbox Series X + PlayStation 5 Combo</h2>
+    <div class="device-details">
+        <p>Combo including both the powerful Xbox Series X and PlayStation 5 gaming consoles.</p>
+        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:2000INR/DAY</button></a>
+    </div>
+</div>
+
+
+<div class="device-card" data-price="400">
+    <div class="device-image">
+        <img src="mousekeyhead.jpg" alt="LogitechGProHyperXCloud2Combo">
+    </div>
+    <h2>Logitech G Pro Gaming Mouse + HyperX Cloud II Gaming Headset +Keyboard</h2>
+    <div class="device-details">
+        <p>Combo with a precision gaming mouse and an immersive gaming headset with a mechanical keyboard for an enhanced gaming experience.</p>
+        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:400INR/DAY</button></a>
+    </div>
+</div>
+
+
+<div class="device-card" data-price="1800">
+    <div class="device-image">
+        <img src="consheadlap.jpg" alt="ASUSTUFGamingF15DualShock4Combo">
+    </div>
+    <h2>ASUS TUF Gaming F15 Laptop + DualShock 4 Wireless Controller Combo+ Headset</h2>
+    <div class="device-details">
+        <p>Combo featuring a high-performance gaming laptop and an additional wireless controller with a headphone for gaming on the go.</p>
+        <a href="footer.html" target="_blank">
+            <button class="rentbutton">Rent Now: <span data-price="1800">1800</span>INR/day</button>
+        </a>
+    </div>
+</div>
+            </div>
+            <script>
+                function sortDevices() {
+                    var select = document.getElementById("sort");
+                    var selectedOption = select.options[select.selectedIndex].value;
+                    var deviceContainer = document.querySelector(".device-container");
+                    var deviceCards = Array.from(deviceContainer.querySelectorAll(".device-card"));
+            
+                    deviceCards.sort(function(a, b) {
+                        var priceA = getPrice(a);
+                        var priceB = getPrice(b);
+            
+                        if (selectedOption === "lowToHigh") {
+                            return priceA - priceB;
+                        } else if (selectedOption === "highToLow") {
+                            return priceB - priceA;
+                        }
+            
+                      
+                        return 0;
+                    });
+            
+                  
+                    deviceContainer.innerHTML = '';
+            
+                    
+                    deviceCards.forEach(function(deviceCard) {
+                        deviceContainer.appendChild(deviceCard);
+                    });
+                }
+            
+                function getPrice(deviceCard) {
+                    return parseFloat(deviceCard.getAttribute('data-price')) || 0;
+                }
+            </script>
+</body>
+</html>
+            
+        
+            
+        
+        
+
+    

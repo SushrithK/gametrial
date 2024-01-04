@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLendr</title>
+    <link rel="icon" type="image/x-icon" href="C:\sushrith\iwd material\controller.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('backgrounddev.png');
+        }
+
+        header {
+            padding: 5px;
+            text-align: left;
+            background-image: url("gaming.jpeg");
+            overflow: hidden; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: larger;
+            margin: 0;
+        }
+
+        .navbar-brand span {
+            color: #ffc107 !important;
+        }
+
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .device-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .device-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .device-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    
+    .device-card {
+        flex: 0 0 calc(30% - 20px); 
+        margin-top: 40px;
+        box-sizing: border-box;
+        
+    }
+
+    
+    .device-image {
+        flex: 0 0 100%; 
+        text-align: center;
+    }
+
+    .device-details,#sort{
+    flex: 0 0 100%;
+    text-align: center;
+    border: 2px solid #000; 
+    padding: 15px; 
+    color: black; 
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .goback-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        text-decoration:none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .goback-button:hover {
+        background-color: red;
+    }
+    h2{
+        text-align: center;
+    }
+    label[for="sort"], #sort {
+    margin-top: 20px;
+    margin-left: 20px;
+    }
+    .rentbutton{
+        font-weight: bolder;
+    }
+    </style>
+</head>
+<body>
+        <header>
+            <div class="navbar-brand">
+                <h1>Game<span>Lendr</span></h1>
+            </div>
+            <nav>
+                <ul style="list-style-type: none; display: flex;">
+                    <li style="padding: 20px; text-decoration: none;"><a href="Home1.html">Home</a></li>
+                    <li style="padding: 20px;"><a href="About.html" target="_blank">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <a href="rent1.html" class="goback-button">Back to Rent</a>
+        <label for="sort" style="font-weight: bolder;color: yellow">Sort by:</label>
+        <select id="sort" onchange="sortDevices()">
+            <option value="lowToHigh">Price: Low to High</option>
+            <option value="highToLow">Price: High to Low</option>
+        </select>
+            <div class="device-container">
+                <div class="device-card" data-price="500">
+                    <img src="offer.png" alt="offer" width="50px" height="50px">
+                    <div class="device-image">
+                        <img src="hplaptop.png" alt="Hplaptop">
+                    </div>
+                    <h2>HP Pavilion Gaming-15 Laptop</h2>
+                    <div class="device-details">                      
+                        <p>Amd Ryzen 5 15.6 Inches Micro-Edge, Ips, Anti-Glare, Fhd Display (8Gb Ram/512 Gb Ssd/144 Hz/ Rtx 3050Ti 4Gb Graphics/B&O Audio/Windows 11 Home/Ms Office)15-Ec2048Ax, Shadow Black</p>
+                        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:<span style="text-decoration: line-through;">500INR/Day</span> 400INR/DAY</button></a>
+                    </div>
+                </div>
+                <div class="device-card" data-price="1000">
+                    <div class="device-image">
+                        <img src="delllap.png" alt="DellLaptop">
+                    </div>
+                    <h2>Dell G-15 Gaming laptop</h2>
+                    <div class="device-details">
+                        <p>Dell G15 5520 Gaming Laptop, Intel i5-12500H,16GB DDR5,512GB SSD,NVIDIA RTX 3050 (4GB GDDR6),15.6"(39.62cm) FHD WVA AG 120Hz 250 nits, Backlit Purple, Win 11 + MSO'21,Dark Shadow Grey,2.81kg</p>
+                        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:1000INR/DAY</button></a>
+                    </div>
+                </div>
+                <div class="device-card" data-price="2000">
+                    <div class="device-image">
+                        <img src="asuslap.png" alt="asuslap">
+                    </div>
+                    <h2>ASUS TUF Gaming F15 (2023)</h2>
+                    <div class="device-details"> 
+                        <p>15.6" (39.62 cms) FHD 144Hz, Intel Core i5-10300H 10th Gen, GeForce GTX 1650 4GB GDDR6 Graphics (8GB RAM/512GB NVMe SSD/Windows 10/Fortress Gray/2.30 Kg), FX566LH-HN257T</p>
+                        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:2000INR/DAY</button></a>
+                    </div>
+                </div>
+                <div class="device-card" data-price="600">
+                    <div class="device-image">
+                        <img src="lenovolap.png" alt="LenovoLap">
+                    </div>
+                    <h2>Lenovo Legion 5 Pro</h2>
+                    <div class="device-details">                       
+                        <p>165Hz WQXGA Gaming Laptop AMD Ryzen 7-5800H 16GB RAM 512GB SSD RTX 3060 6GB GDDR6 Storm Grey</p>
+                        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:600INR/DAY</button></a>
+                    </div>
+                </div>
+                <div class="device-card" data-price="80">
+                    <img src="offer.png" alt="offer" width="50px" height="50px">
+                    <div class="device-image">
+                        <img src="logimouse.png" alt="Logimouse">
+                    </div>
+                    <h2>Logitech M330</h2>
+                    <div class="device-details"> 
+                        <p> Silent Plus, 1000 DPI Optical Tracking, 24 Month Life Battery Wireless Optical Mouse  (USB, Black)</p>                     
+                        <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now: <span data-price="80" style="text-decoration: line-through;">100INR/Day</span>80INR/Day</button></a>
+                    </div>
+                </div>
+                
+
+<div class="device-card" data-price="80">
+    <div class="device-image">
+        <img src="logitechgpro.png" alt="LogitechGPro">
+    </div>
+    <h2>Logitech G Pro Gaming Mouse</h2>
+    <div class="device-details">
+        <p>Precision gaming mouse designed for professional gamers.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:80INR/DAY</button></a>
+        
+    </div>
+</div>
+
+<div class="device-card" data-price="120">
+    <div class="device-image">
+        <img src="razerdeathadder.png" alt="RazerDeathAdder">
+    </div>
+    <h2>Razer DeathAdder Elite Gaming Mouse</h2>
+    <div class="device-details">
+        <p>Ergonomic gaming mouse with high-precision optical sensor.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:120INR/DAY</button></a>
+        
+    </div>
+</div>
+
+<div class="device-card" data-price="2000">
+    <div class="device-image">
+        <img src="alienwareaurora.png" alt="AlienwareAurora">
+    </div>
+    <h2>Alienware Aurora Gaming PC</h2>
+    <div class="device-details">
+        <p>Powerful gaming PC with high-end components for immersive gaming experiences.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:2000INR/DAY</button></a>
+        
+    </div>
+</div>
+
+<div class="device-card" data-price="1500">
+    <div class="device-image">
+        <img src="msigamingpc.png" alt="MSIGamingPC">
+    </div>
+    <h2>MSI Infinite Gaming PC</h2>
+    <div class="device-details">
+        <p>High-performance gaming PC with MSI components and customizable RGB lighting.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:1500INR/DAY</button></a>
+        
+    </div>
+</div>
+
+<div class="device-card" data-price="120">
+    <div class="device-image">
+        <img src="corsairk95.png" alt="CorsairK95">
+    </div>
+    <h2>Corsair K95 RGB Platinum XT Mechanical Keyboard</h2>
+    <div class="device-details">
+        <p>High-quality mechanical gaming keyboard with customizable RGB backlighting.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:120INR/DAY</button></a>
+        
+    </div>
+</div>
+
+<div class="device-card" data-price="100">
+    <div class="device-image">
+        <img src="razerblackwidow.png" alt="RazerBlackWidow">
+    </div>
+    <h2>Razer BlackWidow Elite Mechanical Gaming Keyboard</h2>
+    <div class="device-details">
+        <p>Feature-rich mechanical gaming keyboard designed for competitive gaming.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now:100INR/DAY</button></a>
+        
+    </div>
+</div>
+
+<div class="device-card" data-price="150">
+    <img src="offer.png" alt="offer" width="50px" height="50px">
+    <div class="device-image">
+        <img src="hyperxcloud2.png" alt="HyperXCloud2">
+    </div>
+    <h2>HyperX Cloud II Gaming Headset</h2>
+    <div class="device-details">
+        <p>Comfortable and immersive gaming headset with virtual 7.1 surround sound.</p>
+        
+            <a href="payment.html" target="_blank"><button class="rentbutton">Rent Now: <span data-price="150" style="text-decoration: line-through;">200INR/Day</span>150INR/day</button></a>
+        
+    </div>
+</div>
+            </div>
+            <script>
+                function sortDevices() {
+                    var select = document.getElementById("sort");
+                    var selectedOption = select.options[select.selectedIndex].value;
+                    var deviceContainer = document.querySelector(".device-container");
+                    var deviceCards = Array.from(deviceContainer.querySelectorAll(".device-card"));
+            
+                    deviceCards.sort(function(a, b) {
+                        var priceA = getPrice(a);
+                        var priceB = getPrice(b);
+            
+                        if (selectedOption === "lowToHigh") {
+                            return priceA - priceB;
+                        } else if (selectedOption === "highToLow") {
+                            return priceB - priceA;
+                        }
+            
+                        
+                        return 0;
+                    });
+            
+                    
+                    deviceContainer.innerHTML = '';
+            
+                    
+                    deviceCards.forEach(function(deviceCard) {
+                        deviceContainer.appendChild(deviceCard);
+                    });
+                }
+            
+                function getPrice(deviceCard) {
+                    return parseFloat(deviceCard.getAttribute('data-price')) || 0;
+                }
+            </script>
+</body>
+</html>
+            
+        
+            
+        
+        
+
+    

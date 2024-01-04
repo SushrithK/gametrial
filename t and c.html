@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLendr</title>
+    <link rel="icon" type="image/x-icon" href="C:\sushrith\iwd material\controller.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            padding: 5px;
+            text-align: left;
+            background-image: url("gaming.jpeg");
+            overflow: hidden; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: larger;
+            margin: 0;
+        }
+
+        .navbar-brand span {
+            color: #ffc107 !important;
+        }
+
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        .goback-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        text-decoration:none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .goback-button:hover {
+        background-color: red;
+    }
+        </style>
+</head>
+<body>
+        <header>
+            <div class="navbar-brand">
+                <h1>Game<span>Lendr</span></h1>
+            </div>
+        </header>
+
+        <h1>Go Beyond</h1>
+        <hr>
+        <h2>Terms And Conditions</h2>
+        <ol>
+            <li>We are not responsible for any faults in the console chosen by the customer.</li>
+            <li>The customer is completely responsible for any damages caused to the console when he/she is using the console devices.</li>
+            <li>If the customer exceeds the time limit(when they are renting it), he/she will be charged 2500 RS for every extra half an hour.</li>
+        </ol>
+
+        <legend>Terms and conditions</legend>
+        <label for="tandc"></label>
+        <input type="checkbox" id = "tandc" name="tc" required>I agree with the terms and conditions applied
+        <br>
+
+        <a href="Home1.html" class="goback-button">Continue</a>
+</body>
+</html>

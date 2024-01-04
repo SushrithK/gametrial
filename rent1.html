@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLendr</title>
+    <link rel="icon" type="image/x-icon" href="C:\sushrith\iwd material\controller.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('backgrounddev.png');
+        }
+
+        header {
+            padding: 5px;
+            text-align: left;
+            background-image: url("gaming.jpeg");
+            overflow: hidden; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: larger;
+            margin: 0;
+        }
+
+        .navbar-brand span {
+            color: #ffc107 !important;
+        }
+
+        nav {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .device-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .device-card:hover {
+            transform: scale(1.05);
+        }
+
+        .device-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .device-card {
+            flex: 0 0 calc(30% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .device-image {
+            flex: 0 0 100%;
+            text-align: center;
+        }
+
+        .device-details {
+            flex: 0 0 100%;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar-brand">
+            <h1>Game<span>Lendr</span></h1>
+        </div>
+        <nav>
+            <li style="list-style-type: none; display: inline-block; padding: 20px; text-decoration: none;"><a href="Home1.html">Home</a></li>
+            <li style="list-style-type: none; display: inline-block; padding: 20px;"><a href="About.html" target="_blank">About Us</a></li>
+        </nav>
+    </header>
+    
+
+
+    <div class="device-container">
+        
+        <div class="device-card">
+            <div class="device-image">
+                <img src="console.jpg" alt="Console Device">
+            </div>
+            <div class="device-details">
+                <h2>CONSOLE DEVICES</h2>
+                <a href="ConsDevice.html"><button>Browse</button></a>
+            </div>
+        </div>
+
+        
+        <div class="device-card">
+            <div class="device-image">
+                <img src="hplaptop.png" alt="PC Device">
+            </div>
+            <div class="device-details">
+                <h2>PC DEVICES</h2>
+                <a href="PcDevices.html"><button>Browse</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="device-container">
+        
+        <div class="device-card">
+            <div class="device-image">
+                <img src="game.png" alt="Game">
+            </div>
+            <div class="device-details">
+                <h2>GAMES</h2>
+                <a href="games.html"><button>Browse</button></a>
+            </div>
+        </div>
+
+        
+        <div class="device-card">
+            <div class="device-image">
+                <img src="combos.jpg" alt="Combos">
+            </div>
+            <div class="device-details">
+                <h2>COMBOS</h2>
+                <a href="Combos.html"><button>Browse</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
